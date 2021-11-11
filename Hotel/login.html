@@ -1,0 +1,71 @@
+<html>
+<body bgcolor="#dcf5e9" background="bg2.jpg">
+<center>
+
+<br><br><br><br><br><br><br>
+	<fieldset  style="width : 40%; border-color: #F00;
+  border-style: solid;">
+	<img src = "login4.png" width="100" height="100"></img>
+	<h2>LOGIN</h2>
+	
+
+	<table>
+	
+	<form method="post" name="myForm" action="login.php">
+	<tr>
+	<td>USERNAME:</td>
+	<td><input type="text" name="username" id="a"></td>
+	</tr>
+	
+	<tr>
+	<td>PASSWORD :</td>
+	<td><input type="password" name="password" id="b"></td>
+	</tr>
+
+	<tr>
+	<td>&nbsp;</td>
+		<td><select name="usertype">
+		<option  value="user">User</option>
+		<option  value="admin">Admin</option>
+	</select>
+	<input type="checkbox" onclick="myFunction()">Show Password</td>
+	</tr>
+	
+	
+	
+	<tr>
+	<td>&nbsp;</td>
+	<td><input type="submit" onclick="return validateForm()"><input type="reset"></td>
+	</tr>
+	
+	<tr>
+	<td>&nbsp;</td>
+	<td><a href="register.html">Click here to register</a> | <a href="index.html">Main Page</a></td>
+	</tr>
+	</form>
+	
+	</table>
+	</fieldset>
+
+</center>
+
+		<script>
+		
+			function myFunction() {
+				
+				var d = document.getElementById("b");
+				if (d.type === "password") {
+					d.type = "text";
+				} else {
+					d.type = "password";
+				}
+			
+			}
+	
+		</script>
+		
+
+
+
+</body>
+</html>

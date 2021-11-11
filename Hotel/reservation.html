@@ -1,0 +1,57 @@
+<html>
+<style>
+body { 
+  background-image: url('bg2.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+  color: white;
+}
+</style>
+<body>
+<center>
+<a href="homepage customer.html"><img src="home.png" align="right" title="Homepage" height="70" width="70"></a>
+<h1> Welcome to Mannequin Hotel</h1>
+<h3> The best place to clear your mind!</h3><hr>
+
+<h3> We give you the best affordable price you deserve! </h3>
+<p> Here is the price list based on room type. </p>
+<table width="300" border="4">
+<tr><td><b>Room Type</b></td><td><b>Price</b></td></tr>
+<tr><td>Single Room</td><td>RM 120.00</td></tr>
+<tr><td>Deluxe Room</td><td>RM 210.00</td></tr>
+<tr><td>Family Room</td><td>RM 340.00</td></tr>
+<tr><td>Suite Room</td><td>RM 450.00</td></tr></table><br><hr>
+
+<h3> Lets make your vacation plan turn into reality by fill in this form! </h3>
+<fieldset>
+<legend> Booking Form </legend>
+<p><b> *Notice : We only provide free breakfast for 2 Adult. Price for add-on breakfast : Adult - RM15.00 | Children - RM10.00*</b></p>
+<form method="post" action="insert.php">
+<table width="480" border="2">
+<tr><td> Name : </td>
+<td><input type="text" size="42" name="name" value="" required></td></tr>
+<tr><td> IC No. : </td>
+<td><input type="text" name="ic" value="" required></td></tr>
+<tr><td> Phone No. : </td>
+<td><input type="text" name="phone" value="" required></td></tr>
+<tr><td> Email : </td>
+<td><input type="text" name="email" value="" required></td></tr>
+<tr><td> Room type : </td>
+<td><select name="room">
+<option value="single" >Single Room</option>
+<option value="deluxe" >Deluxe Room</option>
+<option value="family" >Family Room</option>
+<option value="suite" >Suite Room</option></td></tr>
+<tr><td> Add-on Breakfast (Adult) : </td>
+<td><input type="number" name="bfastadult" value="" required></td></tr>
+<tr><td> Add-on Breakfast (Child) : </td>
+<td><input type="number" name="bfastchild" value="" required></td></tr>
+<tr><td>Check in : </td>
+<td><input type="date" name="datestart" required></td></tr>
+<tr><td>Check out : </td>
+<td><input type="date" name="dateend" required></td></tr>
+<tr><td colspan="2"><center><input type="submit" value="Submit"></center></td></tr></table>
+
+</body>
+</html>

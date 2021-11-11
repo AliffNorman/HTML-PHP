@@ -1,0 +1,104 @@
+<html>
+<body bgcolor="#dcf5e9">
+<center>
+
+<br><br><br><br><br><br><br>
+	<fieldset style="width : 40%;">
+	<img src = "login4.png" width="100" height="100"></img>
+	<h2>REGISTER</h2>
+	
+
+	<table>
+	
+	<form method="post" name="myForm" action="register.php">
+	<tr>
+	<td>USERNAME:</td>
+	<td><input type="text" name="username" id="a"></td>
+	</tr>
+	
+	<tr>
+	<td>PASSWORD :</td>
+	<td><input type="password" name="password" id="b"></td>
+	</tr>
+	
+	<tr>
+	<td>RE-PASSWORD :</td>
+	<td><input type="password" name="password2" id="c"></td>
+	</tr>
+	
+	<tr>
+	<td>&nbsp;</td>
+	<td><input type="checkbox" onclick="myFunction()">Show Password</td>
+	</tr>
+	
+	<tr>
+	<td>&nbsp;</td>
+	<td><input type="submit" onclick="return validateForm()"><input type="reset"></td>
+	</tr>
+	
+	<tr>
+	<td>&nbsp;</td>
+	<td><a href="login.html">Click here to login</a> | <a href="index.html">Main Page</a></td>
+	</tr>
+	</form>
+	
+	</table>
+	</fieldset>
+
+</center>
+
+		
+		<script>
+
+	function validateForm() {
+	
+		var x = document.forms["myForm"]["username"].value;
+		var y = document.forms["myForm"]["password"].value;
+		var d = document.forms["myForm"]["password2"].value;
+		
+		if (x == "") {
+			alert("Username must be filled out");
+			return false;
+			
+					}
+		if (y == "") {
+			alert("Password must be filled out");
+			return false;
+			
+					}
+	
+	else if(x!=""){
+			if(y == d){
+				alert("You have succesfully register.Welcome "+x+"!");}
+			else{ alert("Your password haven't match please fill out the form agains.Thanks.");}
+	
+		}
+	}
+
+	</script>
+		
+		<script>
+		
+			function myFunction() {
+				
+				var d = document.getElementById("b");
+			    var c = document.getElementById("c");
+				if (d.type && c.type  === "password")
+			
+				{
+					d.type = "text";
+					c.type = "text";
+				} else {
+					d.type = "password";
+					c.type = "password";
+				}
+			
+			}
+	
+		</script>
+		
+
+
+
+</body>
+</html>
